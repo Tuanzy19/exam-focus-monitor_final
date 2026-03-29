@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Exam Monitoring</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>AI Exam Focus Monitoring</h1>
+
+    <button onclick="startMonitoring()">Start Monitoring</button>
+    <button onclick="stopMonitoring()">Stop</button>
+    <button onclick="resetMonitoring()">Reset</button>
+
+    <div class="video-box">
+        <img id="videoFeed" src="" style="display: none;">
+        <p id="placeholder">Camera not started</p>
+    </div>
+
+    <p id="status">Status: Not Started</p>
+    <p id="counter">Total Distraction: 0</p>
+    <p id="phoneCounter">Phone Detected: 0</p>
+    <p id="noFaceCounter">No Face Detected: 0</p>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
